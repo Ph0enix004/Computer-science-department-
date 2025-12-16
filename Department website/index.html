@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CS Department</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            border-bottom: 8px solid var(--accent-color);
+        }
+
+        /* Specific Internal style */
+        .dept-description {
+            color: var(--main-color);
+            border-left: 5px solid #ccc;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>COMPUTER SCIENCE DEPARTMENT</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="clubs.html">Department Clubs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="frames.html">Frame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Welcome</h2>
+            <p class="dept-description">
+                The Computer Science Department is dedicated to providing high-quality education in cutting-edge
+                technologies. We foster innovation, critical thinking, and practical skills essential for the modern IT
+                industry. Our faculty are leading experts, and our curriculum is constantly updated to reflect the
+                dynamic field of computing.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h3>College Building Map (Clickable Areas)</h3>
+
+            <img src="download.jpeg" alt="College Building Map" usemap="#navmap"
+                style="width: 100%; max-width: 600px; height: auto;">
+            <map name="navmap">
+                <area shape="rect" coords="5,5,150,100" href="about.html" alt="About Us">
+                <area shape="circle" coords="300,100,80" href="courses.html" alt="Courses">
+            </map>
+            <p style="color: #c0392b; font-size: 0.9em; margin-top: 10px;">
+                *Hover over and click the map above to navigate to key pages.*
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

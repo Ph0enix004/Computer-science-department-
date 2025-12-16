@@ -1,0 +1,202 @@
+/* Custom Properties (Variables) - Q2.4.2 var() */
+:root {
+    --main-color: #2c3e50; /* Dark Blue */
+    --accent-color: #e74c3c; /* Red/Orange */
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+}
+
+/* 4. Universal selector (*) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 2. ID Selector (#header) */
+#header {
+    /* Backgrounds and Colors */
+    background: var(--main-color); /* Fallback */
+    /* Q2.4.4 hsl() or rgba() */
+    background: linear-gradient(90deg, var(--main-color), hsl(200, 50%, 40%)); 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Positioning */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 1. Element Selector (h1) */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+/* 3. Class Selector (.nav) and List Styling */
+#nav ul {
+    list-style: none;
+    display: flex; /* Layout/Flexbox */
+    justify-content: center;
+    padding: 10px 0;
+}
+#nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transitions and Animations */
+}
+/* 6. Pseudo-class Selector (:hover, .active-nav) */
+#nav li a:hover,
+#nav li a.active-nav { 
+    background-color: var(--accent-color);
+    transform: scale(1.05); /* Transformations */
+}
+
+main {
+    /* Q2.4.1 calc() function */
+    width: calc(100% - 40px); 
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Box model */
+}
+
+/* Table Styling */
+.course-table {
+    width: 100%;
+    border-collapse: collapse; /* List and table styling */
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out; /* Animation */
+}
+.course-table th, .course-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.course-table th {
+    background-color: var(--main-color);
+    color: white;
+}
+.course-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Pseudo-element Selector (::first-line) */
+p::first-line {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Image Styling */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Q2.4.2 Pseudo-class input:focus */
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--accent-color);
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+.primary-button {
+    background-color: var(--accent-color);
+    color: white;
+}
+.primary-button:hover {
+    background-color: #c0392b;
+}
+.secondary-button {
+    background-color: #bdc3c7;
+    color: var(--main-color);
+}
+.secondary-button:hover {
+    background-color: #95a5a6;
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* JavaScript Class for Animation */
+.content-section {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+.content-section:last-child {
+    border-bottom: none;
+}
+.content-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 8. Media Queries: Make the page responsive for different screen sizes */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    #nav ul {
+        flex-direction: column; /* Stack navigation links */
+    }
+    #nav li a {
+        margin: 5px 0;
+    }
+    main {
+        padding: 15px;
+        width: 100%;
+    }
+}

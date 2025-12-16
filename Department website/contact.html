@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>CONTACT US</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="clubs.html">Department Clubs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="frames.html">Frame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="Query">Query (Select from dropdown):</label>
+                    <select id="query" name="query">
+                        <option value="admissions">Admissions</option>
+                        <option value="academics">Academics</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button primary-button">Submit Inquiry</button>
+            </form>
+        </section>
+
+        <p class="back-link-container">
+            <a href="index.html" class="button secondary-button">Return to Home</a>
+        </p>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
